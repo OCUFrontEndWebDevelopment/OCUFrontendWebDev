@@ -1,0 +1,263 @@
+/* styles.css */
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.task-list {
+  margin-bottom: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.add-task {
+  margin-top: 20px;
+}
+
+.add-task input,
+.add-task select,
+.add-task button {
+  margin-right: 10px;
+}
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background: #0052a3;
+}
+/* Container for the entire form */
+.add-task-form {
+display: flex;          /* Use flexbox for layout */
+flex-direction: column; /* Stack children vertically */
+gap: 1rem;             /* Consistent spacing between elements */
+max-width: 400px;      /* Limit form width for readability */
+margin: 1rem 0;        /* Vertical spacing around form */
+padding: 1rem;         /* Inner spacing */
+background: #f8f8f8;   /* Light background to stand out */
+border-radius: 4px;    /* Rounded corners */
+}
+
+/* Container for each form field group */
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 0.5rem;           /* Space between label and input */
+}
+
+/* Style for all labels */
+.form-group label {
+font-weight: bold;     /* Make labels stand out */
+}
+
+/* Required field indicator */
+.required {
+color: red;            /* Red asterisk for required fields */
+margin-left: 4px;      /* Space between label and asterisk */
+}
+
+/* Style for all inputs and selects */
+input, select {
+padding: 0.5rem;       /* Internal spacing */
+border: 1px solid #ddd; /* Light border */
+border-radius: 4px;    /* Rounded corners */
+font-size: 1rem;       /* Readable text size */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+padding: 0.5rem 1rem;  /* Comfortable click target */
+background: #0066cc;   /* Blue background */
+color: white;          /* White text */
+border: none;          /* Remove default border */
+border-radius: 4px;    /* Match other border radii */
+cursor: pointer;       /* Hand cursor on hover */
+font-size: 1rem;       /* Match input text size */
+}
+
+/* Hover state for submit button */
+button[type="submit"]:hover {
+background: #0052a3;   /* Darker blue on hover */
+}
+/* Error message container */
+.error-message {
+background-color: #fff3f3;  /* Light red background */
+border: 1px solid #ffcdd2;  /* Red border */
+color: #d32f2f;            /* Dark red text */
+padding: 0.75rem;
+border-radius: 4px;
+margin-bottom: 1rem;
+}
+
+/* Style for inputs in error state */
+.input-error {
+border-color: #d32f2f !important;  /* Red border */
+background-color: #fff8f8;         /* Light red background */
+}
+
+/* Error text below inputs */
+.error-text {
+color: #d32f2f;
+font-size: 0.875rem;
+margin-top: 0.25rem;
+}
+
+/* Loading state for submit button */
+.submitting {
+background-color: #cccccc !important;  /* Gray out button */
+cursor: not-allowed !important;        /* Show disabled cursor */
+position: relative;                    /* For loading indicator */
+}
+
+/* Optional: Add loading spinner */
+.submitting::after {
+content: '';
+position: absolute;
+width: 1rem;
+height: 1rem;
+border: 2px solid #ffffff;
+border-radius: 50%;
+border-top-color: transparent;
+right: 1rem;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+to { transform: rotate(360deg); }
+}
+/* Container for all filter controls */
+.filters {
+display: flex;
+gap: 1rem;
+margin-bottom: 1rem;
+padding: 1rem;
+background: #f5f5f5;
+border-radius: 4px;
+flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+}
+
+/* Style filter selects and search input consistently */
+.filters select,
+.filters input {
+padding: 0.5rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 0.9rem;
+min-width: 150px;
+}
+
+/* Search input specific styles */
+.filters input[type="search"] {
+flex-grow: 1;  /* Allow search to take remaining space */
+min-width: 200px;
+}
+
+/* Task counter styles */
+.task-counter {
+font-size: 0.9rem;
+color: #666;
+margin-bottom: 1rem;
+}
+
+/* No results message */
+.no-results {
+text-align: center;
+padding: 2rem;
+color: #666;
+font-style: italic;
+background: #f9f9f9;
+border-radius: 4px;
+}
+/* Sort controls container */
+.sort-controls {
+display: flex;
+gap: 0.5rem;
+align-items: center;
+margin-bottom: 1rem;
+flex-wrap: wrap;
+}
+
+.sort-controls span {
+color: #666;
+font-size: 0.9rem;
+}
+
+/* Sort button styles */
+.sort-button {
+padding: 0.4rem 0.8rem;
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+font-size: 0.9rem;
+display: flex;
+align-items: center;
+gap: 0.25rem;
+}
+
+/* Active sort button */
+.sort-button.active {
+background: #e3f2fd;
+border-color: #2196f3;
+color: #1976d2;
+}
+
+/* Sort direction indicator */
+.sort-indicator {
+font-size: 0.8rem;
+}
+
+/* Hover state */
+.sort-button:hover:not(.active) {
+background: #f5f5f5;
+}
