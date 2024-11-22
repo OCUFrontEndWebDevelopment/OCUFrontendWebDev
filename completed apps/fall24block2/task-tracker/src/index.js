@@ -1,13 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import './styles.css';
-import App from './App';
-import FamilyTaskTracker from './FamilyTaskTracker';
+// index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
+import App from "./App";
 
-const root = createRoot(document.getElementById('root'));
-root.render(
-    <StrictMode>
-        {/* <FamilyTaskTracker /> */}
-        <App />
-    </StrictMode>
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
