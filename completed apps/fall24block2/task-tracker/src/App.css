@@ -1,0 +1,62 @@
+/* App.css */
+
+.task-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.overdue {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+.due-soon {
+  border-color: orange;
+  background-color: #fff3e6;
+}
+
+.overdue-warning, .due-soon-warning {
+  color: white;
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.overdue-warning {
+  background-color: red;
+}
+
+.due-soon-warning {
+  background-color: orange;
+}
+
+.add-task-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.no-results {
+  color: gray;
+}
